@@ -74,7 +74,7 @@ func (cplMgr *codePipelineManager) GetGitInfo(pipelineName string) (common.GitIn
 
 	var gitInfo common.GitInfo
 
-	codeCommitRegex := regexp.MustCompile("^http(s?)://.+\\.console\\.aws\\.amazon\\.com/codecommit/home#/repository/([^/]+)/.+$")
+	codeCommitRegex := regexp.MustCompile("^http(s?)://console\\.aws\\.amazon\\.com/codecommit/home\?region=[a-z0-9\-]+#/repository/([^/]+)/.+$")
 	gitHubRegex := regexp.MustCompile("^http(s?)://github\\.com/([^/]+)/([^/]+)/.+$")
 	s3Regex := regexp.MustCompile("^http(s?)://console\\.aws\\.amazon\\.com/s3/home\\?#$")
 
